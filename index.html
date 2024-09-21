@@ -1,41 +1,101 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramo de Flores Amarillas</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* Hacer que la tarjeta ocupe toda la pantalla */
+        .full-screen-card {
             height: 100vh;
-            background-color: #f0f8ff;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .ramo {
-            width: 200px;
+
+        .card {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            font-family: cursive;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
         }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="full-screen-card">
+        <div class="card text-white bg-dark">
+            <div class="card-header">
+                <h5 class="card-title">Para la mujer que me gusta</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Para mí, Alondra, eres una diosa en todos los sentidos. Tu imponente personalidad, tu brillante inteligencia, tu belleza y tu esencia divina te hacen única. Cada vez que hablamos, siento una felicidad inmensa y me alegra tanto que hayas vuelto a mi vida.</p>
+                <p class="card-text">Te quiero mucho y espero poder darte esas flores pronto personalmente, por lo mientras te mando flores virtuales, porque las flores son bonitas y tú eres bonita. Jamás está de más recordarte que me gustas mucho, mucho, mucho, no tienes idea de cuánto, en serio.</p>
+                <!-- Botón para abrir el modal -->
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                    Presiona aquí,¿ó te da miedo?
+                </button>
+            </div>
+        </div>
+    </div>
 
-<svg class="ramo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
-    <!-- Flores -->
-    <circle cx="100" cy="50" r="30" fill="yellow" />
-    <circle cx="70" cy="70" r="30" fill="yellow" />
-    <circle cx="130" cy="70" r="30" fill="yellow" />
-    <circle cx="100" cy="90" r="30" fill="yellow" />
-    
-    <!-- Tallos -->
-    <rect x="95" y="80" width="10" height="100" fill="green" />
-    <rect x="75" y="100" width="10" height="80" fill="green" />
-    <rect x="125" y="100" width="10" height="80" fill="green" />
-    
-    <!-- Hojas -->
-    <ellipse cx="100" cy="180" rx="20" ry="10" fill="green" />
-    <ellipse cx="80" cy="180" rx="20" ry="10" fill="green" />
-    <ellipse cx="120" cy="180" rx="20" ry="10" fill="green" />
-</svg>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¡Para ti diosa!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Carrusel con auto slide -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/1.jpg" class="d-block w-100" alt="Flor 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/2.png" class="d-block w-100" alt="Flor 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/3.jpg" class="d-block w-100" alt="Flor 3">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</body>
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+  </body>
 </html>
